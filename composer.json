@@ -1,0 +1,19 @@
+{
+    "name": "sinevia/php-library-stringutils",
+    "description": "PHP Library String Utils",
+    "type": "library",
+    "keywords": ["string", "utils", "library", "php", "sinevia"],    
+    "homepage": "http://github.com/sinevia/php-library-utils",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Milan Lesichkov",
+            "email": "lesichkovm@gmail.com",
+            "homepage": "http://lesichkov.co.uk",
+            "role": "Lead Developer"
+        }
+    ],
+    "autoload": {
+        "files": ["src/StringUtils.php"]
+    }
+}
