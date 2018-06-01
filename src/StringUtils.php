@@ -96,6 +96,13 @@ class StringUtils {
         return strpos($string, $substring) === false ? false : true;
     }
     
+    public static p2br($string){
+        $noEndPara = substr($string, 0, -4);
+        $noStartAndEndParas = substr($noEndPara, 3);
+        $noParas = str_replace('</p><p>', '<br />', $noStartAndEndParas);
+        return $noParas;
+    }
+    
     public static function substringBetween($string, $match_left, $match_right, $ignore_case = false) {
         $function = $ignore_case ? 'stripos' : 'strpos';
 
