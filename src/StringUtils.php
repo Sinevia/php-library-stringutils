@@ -96,10 +96,15 @@ class StringUtils {
         return strpos($string, $substring) === false ? false : true;
     }
     
+    /**
+     * Converts a well-formed string with <p> tags to string with <br /> tags
+     * @param string $string
+     * @return string
+     */
     public static p2br($string){
-        $noEndPara = substr($string, 0, -4);
-        $noStartAndEndParas = substr($noEndPara, 3);
-        $noParas = str_replace('</p><p>', '<br />', $noStartAndEndParas);
+        $p2br = str_replace('</p><p>', '<br />', $string);
+        $p2brNoEndParas = str_replace('</p>', '', $p2br);
+        $noParas = str_replace('<p>', '', $p2brNoEndParas);
         return $noParas;
     }
     
