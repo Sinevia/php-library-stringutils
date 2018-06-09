@@ -135,6 +135,24 @@ class StringUtils {
         }
         return $string;
     }
+    
+    /**
+     * Surrounds a matching regex with prefix and postfix string
+     */
+    public static function regexSurround($string,$regex,$prefix,$postfix){
+        return preg_replace($regex, $prefix.'$1'.$postfix, $string); 
+    }
+    
+    
+    /**
+     * Replaces a matching regex with match aware replacement string
+     * <code>
+     * regexReplace('/(pic)/','<a href="$1">$1</a>');
+     * </code>
+     */
+    public static function regexReplace($string,$regex,$replacementWithMatches){
+        return preg_replace($regex, $replacementWithMatches, $string); 
+    }
 
     public static function snakify($string, $separator = " ", $remove_separator = false) {
         preg_match_all('!([A-Z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
