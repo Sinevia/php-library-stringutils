@@ -101,7 +101,7 @@ class StringUtils {
      * @param string $string
      * @return string
      */
-    public static p2br($string){
+    public static function p2br($string){
         $p2br = str_replace('</p><p>', '<br />', $string);
         $p2brNoEndParas = str_replace('</p>', '', $p2br);
         $noParas = str_replace('<p>', '', $p2brNoEndParas);
