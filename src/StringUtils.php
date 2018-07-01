@@ -280,6 +280,11 @@ class StringUtils {
      * @return StringUtils
      */
     public static function random($length = 8, $string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890") {
+        $string = $string . $string . $string;
+        $string = $string . $string . $string;
+        $string = $string . $string . $string;
+        $string = $string . $string . $string;
+        
         $chars = str_split($string);
         shuffle($chars);
         shuffle($chars);
