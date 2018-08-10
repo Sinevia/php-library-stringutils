@@ -24,7 +24,7 @@ composer require sinevia/php-library-stringutils v1.1.0
 - isEmail($email)
 - leftFrom($string, $match)
 - maxWords($string, $num, $suffix = '') - Returns the first $num words of $string
-- p2br($string) - Converts a well-formed string with &gt;p> tags to string with &gt;br /> tags
+- p2br($string) - Converts a well-formed string with &lt;p> tags to string with &lt;br /> tags
 - random($length = 8, $string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890") - Returns a random string.
 - regexSurround($string,$regex,$prefix,$postfix) - Surrounds a matching regex with prefix and postfix string
 - regexReplace($string,$regex,$replacementWithMatches) - Replaces a matching regex with match aware replacement string
